@@ -4,9 +4,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# nvm ↓nodebrewに変更した
+
+#nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 
 # rbenv
 export PATH=/usr/local/bin:$PATH
@@ -197,7 +199,7 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" %F{015}(~@ ˃̵ᴗ˂̵)%F{015}\uF0a4%f  "
 
 
-# cdしたら自動でlsコマンド実行
+# cdしたら自動でlsコマンドも実行
 # setopt auto_cd
 # function chpwd() { ls }
 
@@ -205,5 +207,5 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" %F{015}(~@ ˃̵ᴗ˂̵)%F{015}\uF0a4
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # MySQLのパス
-export PathH="/usr/local/opt/mysql@5.7/bin:$PATH"
+# export PathH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
